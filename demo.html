@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>newforms demo</title>
+</head>
+
+<body style="background:#DFE9F6">
+<style>
+a,td,div,span{font-size:12px;}
+</style>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<link href="skins/default/style.css" rel="stylesheet" type="text/css" />
+<script src="jquery.newforms.js"></script>
+<script src="https://res.layui.com/layui/release/laydate/dist/laydate.js?v=20171105"></script>
+
+<script>
+$(document).ready(function(){
+	$("#form1").newforms();
+});
+
+</script>
+
+<form id="form1" name="form1" method="post" action="">
+<div id="test_forms"></div>
+<table width="1200" border="0" cellpadding="3" cellspacing="1" bgcolor="#999999">
+	<tr>
+		<td width="15%" bgcolor="#FFFFFF">输入框</td>
+		<td width="33%" bgcolor="#FFFFFF">
+			<input name="textfield" type="text" size="22" maxlength="32" style="width:80px;" />
+			个		</td>
+		<td width="52%" bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF">输入框</td>
+		<td bgcolor="#FFFFFF"><input name="textfield" type="text" size="22" maxlength="32" />		</td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF">数字框 max="100" min="4"</td>
+		<td bgcolor="#FFFFFF"><input name="textfield" type="text" ntype="number" max="100" min="4" value="3" size="22" maxlength="32" style="width:80px" />		</td>
+		<td bgcolor="#FFFFFF">&lt;input name=&quot;textfield&quot; type=&quot;text&quot;<strong> ntype=&quot;number&quot; max=&quot;100&quot; min=&quot;4&quot;</strong> value=&quot;3&quot; size=&quot;22&quot; maxlength=&quot;32&quot; style=&quot;width:80px&quot; /&gt;</td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF">数字框2 max="100" min="" </td>
+		<td bgcolor="#FFFFFF"><input name="textfield" type="text" ntype="number" max="100" min="" value="" size="22" maxlength="32" style="width:80px" />		</td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF">数字框3  max="100"</td>
+		<td bgcolor="#FFFFFF"><input name="textfield" type="text" ntype="number" max="100" value="" size="22" maxlength="32" style="width:80px" />		</td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF">数字框4  min="2"</td>
+		<td bgcolor="#FFFFFF"><input name="textfield" type="text" ntype="number" min="2" value="" size="22" maxlength="32" style="width:80px" />		</td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+									<td bgcolor="#FFFFFF">&nbsp;</td>
+									<td bgcolor="#FFFFFF">&nbsp;</td>
+									<td bgcolor="#FFFFFF"> <p>日期使用了laydate  <a href="https://www.layui.com/doc/modules/laydate.html" target="_blank">https://www.layui.com/doc/modules/laydate.html</a><br /></p>
+																	<p><strong>cale_config</strong>是日历相关配置，语法参考laydate说明，默认不设置yyyy-MM-dd</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF">日期框</td>
+		<td bgcolor="#FFFFFF"><input name="date1" id="date1" type="text" ntype="date" cale_config='{ "format":"yyyy-MM-dd HH:mm:ss" }'  size="32" maxlength="32" />		</td>
+		<td bgcolor="#FFFFFF">&lt;input name=&quot;date1&quot; id=&quot;date1&quot; type=&quot;text&quot; <strong>ntype=&quot;date&quot; cale_config='{ &quot;dateFmt&quot;:&quot;yyyy-MM-dd HH:mm:ss&quot; }'  </strong>size=&quot;32&quot; maxlength=&quot;32&quot; /&gt;</td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF">日期框2</td>
+		<td bgcolor="#FFFFFF"><input name="date2" id="date2" type="text" ntype="date" cale_config='{ "format":"yyyy-MM-dd","maxDate":"#F{$dp.$D(\\\"date1\\\")}" }'  size="32" maxlength="32" />		</td>
+		<td bgcolor="#FFFFFF">&lt;input name=&quot;date2&quot; id=&quot;date2&quot; type=&quot;text&quot; <strong>ntype=&quot;date&quot; cale_config='{ &quot;dateFmt&quot;:&quot;yyyy-MM-dd&quot;,&quot;maxDate&quot;:&quot;#F{$dp.$D(\\\&quot;date1\\\&quot;)}&quot; }'</strong>  size=&quot;32&quot; maxlength=&quot;32&quot; /&gt;</td>
+	</tr>
+	<tr>
+									<td bgcolor="#FFFFFF">日期框3</td>
+									<td bgcolor="#FFFFFF"><input name="date2" id="date2" type="text" ntype="date" size="32" maxlength="32" />
+									</td>
+									<td bgcolor="#FFFFFF">&lt;input name=&quot;date2&quot; id=&quot;date2&quot; type=&quot;text&quot; <strong>ntype=&quot;date&quot;</strong> size=&quot;32&quot; maxlength=&quot;32&quot; /&gt;</td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#FFFFFF">密码</td>
+		<td bgcolor="#FFFFFF"><input name="textfield" type="password" size="22" maxlength="32" /></td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF">密码</td>
+		<td bgcolor="#FFFFFF"><input name="textfield" type="password" size="22" maxlength="32" /></td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#FFFFFF">文件</td>
+		<td bgcolor="#FFFFFF"><input name="textfield" type="file" size="22"/></td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF">文本</td>
+		<td bgcolor="#FFFFFF"><textarea name="textfield" cols="50" rows="4" style="width:200px;"></textarea></td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF">文本</td>
+		<td bgcolor="#FFFFFF"><textarea name="textfield" cols="50" rows="4"></textarea></td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td height="32" bgcolor="#FFFFFF">多选</td>
+		<td bgcolor="#FFFFFF">
+		<input name="checkbox" type="checkbox" value="1" checked="checked" />
+			aa
+			<input type="checkbox" name="checkbox" value="2" />
+			bb
+			<input type="checkbox" name="checkbox" value="3" />
+			cc
+			<input type="checkbox" name="checkbox" value="4" />
+			dd
+			<input type="checkbox" name="checkbox" value="5" />
+			ee
+			<input type="checkbox" name="checkbox" value="6" />
+			fff			</td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td height="32" bgcolor="#FFFFFF">多选</td>
+		<td bgcolor="#FFFFFF"><input type="checkbox" name="checkbox" value="checkbox" />
+			aa
+				<label for="checkbox11"><input id="checkbox11" type="checkbox" name="checkbox" value="checkbox" />
+bb</label>
+<input type="checkbox" name="checkbox" value="checkbox" />
+cc
+<input type="checkbox" name="checkbox" value="checkbox" />
+dd
+<input type="checkbox" name="checkbox" value="checkbox" /> 
+ee</td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td height="32" bgcolor="#FFFFFF">单选</td>
+		<td bgcolor="#FFFFFF"><input type="radio" name="radiobutton" value="radiobutton" />
+			aa
+			<input type="radio" name="radiobutton" value="radiobutton" />
+			bb
+			<input type="radio" name="radiobutton" value="radiobutton" />
+			cc
+			<input name="radiobutton" type="radio" value="radiobutton" checked="checked" />dd
+			<input type="radio" name="radiobutton" value="radiobutton" />
+			ee</td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td height="32" bgcolor="#FFFFFF">单选</td>
+		<td bgcolor="#FFFFFF"><input name="radiobutton2" type="radio" value="radiobutton" checked="checked" />
+			aa
+				<input type="radio" name="radiobutton2" value="radiobutton" />
+bb
+<input type="radio" name="radiobutton2" value="radiobutton" />
+cc
+<input type="radio" name="radiobutton2" value="radiobutton" />
+dd
+<input type="radio" name="radiobutton2" value="radiobutton" /> 
+ee</td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td height="32" bgcolor="#FFFFFF">下拉</td>
+		<td valign="top" bgcolor="#FFFFFF"><select name="user_list" size="1" id="user_list" style="width:200px;">
+				<option value="1111">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</option>
+				<option value="2222" selected="selected">bbbb</option>
+				<option value="3333">cccc</option>
+				<option value="4444">dddd</option>
+			</select>
+			aa</td>
+		<td valign="top" bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td height="32" bgcolor="#FFFFFF">下拉</td>
+		<td bgcolor="#FFFFFF"><select name="select1" size="1" id="select1" style="width:80px">
+			<option value="1111">aaaa</option>
+			<option value="2222">bbbb</option>
+			<option value="3333">cccc</option>
+			<option value="4444">dddd</option>
+		</select>		</td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF">下拉多选</td>
+		<td bgcolor="#FFFFFF"><select name="select1" size="6" multiple="multiple" id="select1" style="width:120px">
+				<option value="1111">aaaa</option>
+				<option value="2222">bbbb</option>
+				<option value="3333">cccc</option>
+				<option value="4444">dddd</option>
+		</select></td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+		<td bgcolor="#FFFFFF"><input type="submit" name="Submit" value="提交" />
+			<input type="reset" name="Submit" value="重置" />
+			<input type="button" name="Submit" value="按钮" /></td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+		<td bgcolor="#FFFFFF" id="links"><a href="#"  class="newforms_link">昨天</a>&nbsp;&nbsp;<a href="#" class="newforms_link_sel">今天</a>&nbsp;&nbsp;<a href="#" class="newforms_link">最近3天</a>&nbsp;&nbsp;</td>
+		<td bgcolor="#FFFFFF" id="links">&lt;a href=&quot;#&quot;<strong> class=&quot;newforms_link&quot;</strong>&gt;昨天&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;a href=&quot;#&quot; <strong>class=&quot;newforms_link_sel&quot;</strong>&gt;今天&lt;/a&gt;</td>
+	</tr>
+	<tr>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+		<td bgcolor="#FFFFFF" id="links"><a href="#" group_link="1" class="newforms_link">昨天</a>&nbsp;&nbsp;<a href="#" group_link="1" class="newforms_link_sel">今天</a>&nbsp;&nbsp;<a href="#" group_link="1" class="newforms_link">最近3天</a>&nbsp;&nbsp;</td>
+		<td bgcolor="#FFFFFF" id="links">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	</tr>
+</table>
+</form>
+
+</body>
+</html>
